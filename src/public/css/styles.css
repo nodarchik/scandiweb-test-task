@@ -1,0 +1,79 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Merienda', cursive;
+}
+.header{
+    margin: 10px 30px 0px 30px;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 18fr 1fr 1fr;
+}
+.buttons {
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    text-align: center;
+    border-color: rgb(164, 163, 163);
+    box-shadow: 4px 4px #999;
+}
+.buttons:hover {background-color: #8b8b8b}
+.buttons:active {
+    background-color: #5a5a5a;
+    box-shadow: 0 0;
+    transform: translateY(4px);
+}
+.main{
+    min-height: 85vh;
+    background-color: rgb(233, 230, 230);
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+.main .cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 4rem;
+    padding: 10px;
+    border: 10px;
+    height: 85vh;
+}
+.cards .card{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0);
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    align-content: center;
+}
+.card .delete-checkbox{
+    position: relative;
+    right: 45%;
+}
+.main .form-grid{
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+.footer{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#size{
+    display: grid;
+}
+#height{
+    display: none;
+}
+#width{
+    display: none;
+}
+#length{
+    display: none;
+}
+#weight{
+    display: none;
+}
