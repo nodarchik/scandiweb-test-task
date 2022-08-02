@@ -6,10 +6,8 @@ error_reporting(E_ALL);
 $pdo = new PDO('mysql:host=127.0.0.1;dbname=test',"root","toor");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-require_once 'routes.php';
-require_once 'insert.php';
 require_once 'delete.php';
-require_once 'form-validation.php';
+require_once 'insert.php';
 
 $page = $_SERVER["REQUEST_URI"] ?? null;
 switch ($page)  {
