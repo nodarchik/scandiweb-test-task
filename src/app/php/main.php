@@ -13,12 +13,13 @@
 </head>
 
 <body>
-
+<form method="post" action="/delete">
 <header class="header">
     <h1>Product List</h1>
-    <a href="product-add.html" class="buttons">ADD</a>
-
+    <a href="/product-add" class="buttons">ADD</a>
+    <button type="submit" class="buttons" id="delete-product-btn">Mass Delete</button>
 </header>
+
 <main class="main">
     <div class="cards">
             <?php
@@ -27,22 +28,21 @@
                 $orders = $statement -> fetchAll(PDO::FETCH_ASSOC); ?>
             <?php foreach ($orders as $i => $order):  ?>
             <div class="card">
-                <form method="post" action="delete.html">
-                    <input type="hidden" name="id" value="<?php echo $order['id'] ?>">
-                    <button type="submit" class="buttons" id="delete-product-btn">Mass Delete</button>
-                </form>
+                <input class="delete-checkbox" type="checkbox" name="id" value="<?php echo $order['id'] ?>" >
                 <div> <?php echo $order['sku'] ?> </div>
                 <div> <?php echo $order['name'] ?> </div>
-                <div> <?php echo $order['price'] . "$" ?> </div>
-                <div> <?php echo $order['type'] ?> </div>
+                <div> <?php echo $order['price']."$"?> </div>
+                <div> <?php if ($order['size']!=null){echo'Size: '.$order['size'].'MB';}?></div>
+                <div> <?php if ($order['height']!=null){echo'Dimension: '.$order['height'].'x'.$order['width'].'x'.$order['length'];}?></div>
+                <div> <?php if ($order['weight']!=null){echo'Weight: '.$order['weight'];}?></div>
             </div>
             <?php endforeach;  ?>
     </div>
 </main>
-<?php echo $order['id'];?>
+
 <footer class="footer">
     Scandiweb Test assignment
 </footer>
-<script src="/js/delete.js"></script>
+</form>
 </body>
 </html>

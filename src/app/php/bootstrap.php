@@ -6,15 +6,16 @@ error_reporting(E_ALL);
 $pdo = new PDO('mysql:host=127.0.0.1;dbname=test',"root","toor");
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-require_once 'delete.php';
-require_once 'insert.php';
-
 $page = $_SERVER["REQUEST_URI"] ?? null;
+require_once ('insert.php');
 switch ($page)  {
     case "/":
         require_once('main.php');
     break;
-    case "/product-add.html":
+    case "/product-add":
         require_once('product-add.php');
+    break;
+    case "/delete":
+        require_once('delete.php');
     break;
 }

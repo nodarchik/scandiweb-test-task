@@ -11,7 +11,7 @@
     <title>Product Page</title>
 </head>
 <body>
-<form method="post">
+<form method="post" action="/insert">
     <header class="header">
         <h1>Product Add</h1>
         <button type="submit" name="submit" class="buttons">Save</button>
@@ -37,29 +37,29 @@
                         <option value="DVD" id="dvdType">DVD</option>
                         <option value="Furniture" id="furnitureType">Furniture</option>
                         <option value="Book" id="bookType">Book</option>
-                    </select>
+                  </select>
             </div>
         </div>
 
         <div class="form-grid" id="size">
             <div>Size(MB)</div>
-            <div><input type="text" name="type" placeholder="Size"></div>
+            <div><input type="text" name="size" placeholder="Size"></div>
         </div>
         <div class="form-grid" id="height">
             <div>Height(CM)</div>
-            <div><input type="text" name="type" placeholder="Height"></div>
+            <div><input type="text" name="height" placeholder="Height"></div>
         </div>
         <div class="form-grid" id="width">
             <div>Width(CM)</div>
-            <div><input type="text" name="type" placeholder="Width"></div>
+            <div><input type="text" name="width" placeholder="Width"></div>
         </div>
         <div class="form-grid" id="length">
             <div>Length(CM)</div>
-            <div><input type="text" name="type" placeholder="Length"></div>
+            <div><input type="text" name="length" placeholder="Length"></div>
         </div>
         <div class="form-grid" id="weight">
             <div>Weight(KG)</div>
-            <div><input type="text" name="type" placeholder="Weight"></div>
+            <div><input type="text" name="weight" placeholder="Weight"></div>
         </div>
         <div class="errors">
             <?php if (!empty($errors)){foreach ($errors as $error):  ?>
