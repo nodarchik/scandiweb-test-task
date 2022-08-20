@@ -11,5 +11,3 @@ create table orders
     length varchar(255) null,
     weight varchar(255) null
 );
-
-
