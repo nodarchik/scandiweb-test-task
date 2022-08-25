@@ -1,6 +1,5 @@
 <?php
-$errors = [];
-if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $sku = $_POST['sku'];
     $name = $_POST['name'];
     $price = $_POST['price'];
@@ -9,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $width = $_POST['width'];
     $length = $_POST['length'];
     $weight = $_POST['weight'];
-
+    $errors = [];
     if (!$sku){
         $errors[]="Product title is required";
     }

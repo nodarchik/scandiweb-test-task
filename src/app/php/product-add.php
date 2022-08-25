@@ -61,12 +61,13 @@
             <div>Weight(KG)</div>
             <div><input type="text" name="weight" placeholder="Weight"></div>
         </div>
+        <?php if (!empty($errors)): ?>
         <div class="errors">
             <?php if (!empty($errors)){foreach ($errors as $error):  ?>
                 <div><?php echo $error ?></div>
             <?php  endforeach; }?>
         </div>
-
+        <?php endif; ?>
     </main>
 </form>
 
